@@ -1,11 +1,13 @@
-# planning-heuristic-search — what an inadmissible heuristic actually costs
+# planning-heuristic-search
 
-A* returns an optimal path **only** when its heuristic never overestimates the
-true remaining cost. That guarantee is in every textbook and quietly traded away
-in a lot of production pathfinding, where a heuristic gets scaled up to make
-search faster and whatever comes back is still described as "the shortest path".
+A study of what an inadmissible heuristic costs you in A* search.
 
-This measures the trade on maps small enough to verify by eye.
+A* returns an optimal path only when its heuristic never overestimates the
+remaining cost. In practice that guarantee is often traded away — a heuristic is
+scaled up to make search faster, and the result is still described as the
+shortest path. This project measures both sides of that trade, on maps small
+enough to check by eye: how much search time you save, and how much path quality
+you give up.
 
 **Zero dependencies. 86 tests.**
 
